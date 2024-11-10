@@ -42,12 +42,12 @@ a:hover {
 #wrapper {
     overflow: hidden;
     background: #1E1E1E;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .container {
-    width: 1192px;
-    margin: 0px auto;
+    width: 1200px;
+    margin: auto;
 }
 
 /* Header */
@@ -202,7 +202,7 @@ a:hover {
 
 #three-column {
 	overflow: hidden;
-	padding: 10px 0px 50px 0px;
+	padding: 10px 30px 50px 30px;
 }
 
 #three-column .tbox1 {
@@ -224,16 +224,15 @@ a:hover {
 .box-style {
     background: #2C2C2C;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0px 6px 12px rgba(65, 1, 1, 0.3); 
-	transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 123, 255, 0.3); /* Adds a poppy blue shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .box-style:hover {
-    text-align: center;
-    border-radius: 8px;
-	transform: scale(0.99);
-    box-shadow: 0px 6px 12px rgba(1, 62, 65, 0.3); 
+    transform: scale(1.02); /* Slight scale for pop effect */
+    background-color: #333; /* Slightly lighter on hover */
+    box-shadow: 0px 12px 25px rgba(255, 0, 100, 0.4); /* Brighter shadow on hover */
 }
 
 .box-style h2 {
@@ -243,7 +242,9 @@ a:hover {
 .box-style .content {
 	overflow: hidden;
 	width: 324px;
+	height: 180px;
 	padding: 30px;
+	text-align: justify
 }
 
 
@@ -282,23 +283,137 @@ a:hover {
     color: #BB86FC;
 }
 
-img {
+.box-style#image img {
 	width: 500px;
 	height: 600px;
 }
 
 .box-style#image {
-	width: 550px;
-	height: 650px;
+	width: 1250px;
+	height: 680px;
+	margin: auto;
+	padding: 10px 30px 50px 30px;
+	margin-top: 20px;
+	background-color: #121212;
+    box-shadow: 0px 8px 18px rgba(255, 165, 0, 0.4); 
+}
+
+.box-style#image:hover {
+	transform: scale(0.95)
+}
+
+.box-style#web {
+	width: 900px;
+	height: 700px;
 	margin: auto;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	padding-left: 10px;
-	padding-right: 20px;
+	padding-right: 10px;
 	margin-top: 20px;
 	background-color: #121212;
+    box-shadow: 0px 8px 18px rgba(255, 165, 0, 0.4); 
 }
 
-.box-style#image:hover {
+.box-style#web img {
+	width: 800px;
+	height: 600px;
+}
+
+.box-style#web:hover {
 	transform: scale(1.05)
 }
+
+.box-style p button {
+	display: inline-block;
+    /* margin: 1em 0; */
+
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+	color: #a67171;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.box-style p button:hover {
+	color: #FFFFFF;
+	transform: scale(1.05);
+	background-color: #b5d05d8d;
+}
+
+/* Center-align and resize the main container */
+#contact-page {
+		max-width: 600px; /* Set a maximum width for the container */
+		margin: 0 auto; /* Center-align the container */
+		text-align: center; /* Center-align text within the container */
+		padding: 20px;
+	}
+	
+	.contact-links {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+		margin-top: 20px;
+	}
+	
+	.contact-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: #FFFFFF;
+		padding: 10px 15px;
+		border-radius: 8px;
+		text-decoration: none;
+		font-size: 1.2em;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	
+	/* Brighter individual colors for each icon */
+	.contact-item:nth-child(1) {
+		background-color: #FF6F61; /* Bright red for email */
+		box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+	}
+	
+	.contact-item:nth-child(2) {
+		background-color: #0A66C2; /* LinkedIn blue */
+		box-shadow: 0 0 8px rgba(10, 102, 194, 0.5);
+	}
+	
+	.contact-item:nth-child(3) {
+		background-color: #171515; /* GitHub dark color */
+		box-shadow: 0 0 8px rgba(23, 21, 21, 0.5);
+	}
+	
+	/* Glow effect and slight scale on hover */
+	.contact-item:hover {
+		transform: scale(1.05);
+		box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /* White glow on hover */
+	}
+	
+	.contact-item i {
+		color: #FFFFFF;
+	}
+	
+	
+	.contact-container {
+		width: 1292px;
+		margin: 0px auto;
+	}
+
+	.image-container#profile {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px; /* Add some spacing if desired */
+	}
+	
+	.image-container#profile img {
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	}
+	
