@@ -1,4 +1,5 @@
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     background: #121212;
@@ -40,6 +41,9 @@ a:hover {
 }
 
 #wrapper {
+	min-height: 100%;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     background: #1E1E1E;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
@@ -153,6 +157,7 @@ a:hover {
 #page {
 	overflow: hidden;
 	padding: 20px 20px 40px 20px;
+	flex: 1;
 }
 
 /* Content */
@@ -170,11 +175,11 @@ a:hover {
 	height: 100px;
 	margin: 0 auto;
 	padding: 50px 0px 0px 0px;
+	width: 100%;
 }
 
 #footer p {
 	margin: 0;
-	padding-top: 10px;
 	line-height: normal;
 	text-align: center;
 	text-shadow: 1px 1px 0px #FFFFFF;
@@ -304,7 +309,7 @@ a:hover {
 
 .box-style#web {
 	width: 900px;
-	height: 700px;
+	height: 750px;
 	margin: auto;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -369,6 +374,10 @@ a:hover {
 		font-size: 1.2em;
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
+
+	.project-description {
+		text-align: justify;
+	}
 	
 	/* Brighter individual colors for each icon */
 	.contact-item:nth-child(1) {
@@ -404,6 +413,7 @@ a:hover {
 
 	.image-container#profile {
 		display: flex;
+		text-align: justify;
 		justify-content: center;
 		align-items: center;
 		margin-top: 20px; /* Add some spacing if desired */
@@ -418,14 +428,40 @@ a:hover {
 	}
 
 	.animation-project-description {
-		text-align: left;
+		text-align: justify;
 	}	
 
 	.animation-project-description {
+		padding: 10px;
 		font-size: 16px;
-		text-align: left;
+		text-align: justify;
 		margin: 20px 0; /* Adjust margins if needed */
 		line-height: 1.6; /* Improves readability */
 	}
-	
+
+	#footer {
+		font-size: large;
+		height: 50px;
+		background: #2C2C2C;
+		text-align: center;
+		padding: 10px;
+		box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+	}
+	#footer a {
+		color: #BB86FC;
+		text-decoration: none;
+	}
+	#footer a:hover {
+		color: #FFFFFF;
+	}	
+
+	@media (max-width: 768px) {
+		#menu ul {
+			flex-direction: column;
+			align-items: center;
+		}
+		.container {
+			width: 90%;
+		}
+	}	
 	
